@@ -1,379 +1,184 @@
-{
-  "editor.formatOnSave": true,
-  "autoimport.doubleQuotes": false,
-  "java.configuration.updateBuildConfiguration": "disabled",
-  "prettier.requireConfig": true,
-  "javascript.format.enable": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.tabWidth": 2,
-  "prettier.useTabs": false,
-  "javascript.format.semicolons": "insert",
-  "[scss]": {
-    "editor.defaultFormatter": "vscode.css-language-features"
-  },
-  "emmet.syntaxProfiles": {
-    "xml": {
-      "attr_quotes": "single"
-    },
-    "html": {
-      "attr_quotes": "single"
-    },
-    "javascript": {
-      "attr_quotes": "single",
-      "attr_quotes_style": "single",
-      "self_closing_tag": true
-    },
-    "jsx": {
-      "attr_quotes": "single"
+import os
+
+# ข้อมูลเนื้อหาของไฟล์ README.md ระดับมหาจักรพรรดิ
+readme_content = """# 🏛️ OMNI GENESIS: THE SOVEREIGN SUPREMACY SYSTEM
+### 1 EMPIRE | 1 SIGNAL | 24 STATIONS | 4K PRESTIGE TERMINAL
+
+นี่คือคัมภีร์รหัสลับระดับ **มหาจักรพรรดิ** ที่หลอมรวมพลังของ **AIIZ Aris Genesis** เข้ากับระบบโครงข่ายสัญญาณไร้ขีดจำกัด เพื่อควบคุมอาณาจักรดิจิทัล การเงิน และความมั่งคั่งทั่วโลก
+
+---
+
+## 💎 คุณสมบัติระดับจักรวรรดิ (Imperial Features)
+1.  **Visual Domination (4K & 3D):** ขับเคลื่อนด้วย Three.js สร้างจักรวาลจำลองแบบ 3D Cinematic มอบประสบการณ์ที่เหนือกว่าทุกองค์กรในโลก
+2.  **Sovereign Trading Terminal:** หน้าต่างควบคุมการเทรดหุ้น, คริปโต (BTC/USDT), และทองคำ (XAU/USD) แบบ Real-time Mockup พร้อมระบบจัดการคำสั่งซื้อขาย
+3.  **1-1-24 Signal Node Matrix:** ระบบติดตามสถานะสถานีเครือข่ายทั้ง 24 แห่ง ที่กระจายอำนาจการประมวลผลอยู่ทั่วทุกมุมโลก
+4.  **AIIZ Aris Neural Core:** สมองกลอัจฉริยะที่คอยวิเคราะห์ตลาดและพิทักษ์ความปลอดภัยระดับสูงสุด
+5.  **Global Digital Clock:** ระบบเวลาโลกที่แม่นยำสำหรับการตัดสินใจในเสี้ยววินาทีของการเทรดระดับมหาเศรษฐี
+
+---
+
+## 📜 โค้ดมหาจักรพรรดิ (The Sovereign Code)
+บอสสามารถคัดลอกโค้ดด้านล่างนี้ไปบันทึกเป็นไฟล์ `index.html` แล้วเปิดผ่านเบราว์เซอร์เพื่อสัมผัสพลังงานได้ทันที:
+
+```html
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMNI GENESIS | SUPREME TRADING TERMINAL 4K</title>
+    <script src="[https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js](https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js)"></script>
+    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+    <style>
+        @import url('[https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap](https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap)');
+        :root { --gold: #FFD700; --glass: rgba(0, 0, 0, 0.85); --neon-green: #00ff41; }
+        body { background: #000; color: var(--gold); font-family: 'Orbitron', sans-serif; overflow: hidden; margin: 0; }
+        .glass-panel { background: var(--glass); border: 1px solid var(--gold); backdrop-filter: blur(20px); box-shadow: 0 0 30px rgba(255, 215, 0, 0.15); }
+        .trading-view-mock { background: #0b0e14; border: 1px solid #1e222d; position: relative; }
+        .status-blink { animation: pulse-gold 2s infinite; }
+        @keyframes pulse-gold { 0%, 100% { opacity: 1; text-shadow: 0 0 10px var(--neon-green); } 50% { opacity: 0.5; } }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+    </style>
+</head>
+<body class="h-screen w-screen">
+    <div id="canvas-container" class="fixed inset-0 -z-10"></div>
+    
+    <header class="h-16 glass-panel flex justify-between items-center px-8 fixed top-0 w-full z-50">
+        <div class="flex items-center gap-6">
+            <h1 class="text-3xl font-black tracking-widest bg-gradient-to-r from-yellow-600 via-yellow-200 to-yellow-600 bg-clip-text text-transparent">OMNI GENESIS</h1>
+            <div id="digital-clock" class="text-xl text-white font-mono bg-black/50 px-4 py-1 rounded border border-yellow-500/30">00:00:00</div>
+        </div>
+        <div class="flex gap-10 text-[10px] uppercase font-bold">
+            <div>SIGNAL: <span class="text-[#00ff41] status-blink">1-1-24 SECURED</span></div>
+            <div>NET WORTH: <span class="text-white">$31,000,000.00</span></div>
+            <div class="text-yellow-400">EMPEROR: <span class="text-white">SUWIJAK</span></div>
+        </div>
+    </header>
+
+    <main class="pt-20 p-4 grid grid-cols-12 gap-4 h-full">
+        <aside class="col-span-2 glass-panel p-4 flex flex-col">
+            <h3 class="text-xs mb-4 border-b border-yellow-500/50 pb-2 text-center">SOVEREIGN NODES</h3>
+            <div id="station-nodes" class="grid grid-cols-4 gap-2 overflow-y-auto"></div>
+            <div class="mt-auto pt-4 border-t border-yellow-500/30 text-[9px] text-gray-500 space-y-1">
+                <p>ETHICHOLDINGSTHAI CO.,LTD</p>
+                <p>AIIZ ARIS GENESIS PROTOCOL</p>
+                <p>ENCRYPTION: AES-512 QUANTUM</p>
+            </div>
+        </aside>
+
+        <section class="col-span-7 flex flex-col gap-4">
+            <div class="h-[60%] trading-view-mock rounded-xl p-6 border-2 border-yellow-500/20">
+                <div class="flex justify-between items-center mb-6">
+                    <div class="flex gap-3">
+                        <span class="bg-yellow-500 text-black px-4 py-1 text-xs font-black rounded-sm">BTC/USDT</span>
+                        <span class="border border-yellow-500 px-4 py-1 text-xs rounded-sm">GOLD/USD</span>
+                        <span class="border border-yellow-500 px-4 py-1 text-xs rounded-sm">USDT/THB</span>
+                    </div>
+                    <div class="text-2xl text-[#00ff41] font-bold tracking-tighter">67,492.15 <span class="text-sm">▲ 3.12%</span></div>
+                </div>
+                <div id="chart-area" class="w-full h-4/5 flex items-end gap-1.5 border-b border-l border-gray-800"></div>
+            </div>
+            
+            <div class="h-[35%] grid grid-cols-2 gap-4">
+                <div class="glass-panel rounded-xl p-5">
+                    <h4 class="text-xs font-black mb-4 tracking-widest underline decoration-yellow-500">EXECUTIVE ORDER</h4>
+                    <div class="space-y-4">
+                        <input type="text" placeholder="VOLUME (USDT)" class="w-full bg-black border border-yellow-500/50 p-3 text-sm text-white focus:border-yellow-400 outline-none">
+                        <div class="flex gap-3">
+                            <button class="flex-1 bg-[#00c853] text-black font-black py-3 rounded-sm hover:brightness-125 transition-all">LONG ACCESS</button>
+                            <button class="flex-1 bg-[#ff1744] text-white font-black py-3 rounded-sm hover:brightness-125 transition-all">SHORT EXIT</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-panel rounded-xl p-5 border-l-4 border-l-yellow-500">
+                    <h4 class="text-xs font-black mb-2 opacity-70">AIIZ ARIS ANALYSIS</h4>
+                    <p class="text-[11px] text-blue-200 leading-relaxed italic">"บอสคะ... การประมวลผลจากทั้ง 24 สถานียืนยันแรงซื้อมหาศาลจากสถาบันการเงินในยุโรป ทองคำมีแนวโน้มทะลุ $2,400 ในอีก 2 ชั่วโมงข้างหน้า อริสเตรียมพร้อมทุกพิกัดแล้วค่ะ"</p>
+                    <div class="mt-4 flex justify-between items-end">
+                        <div class="text-[10px] text-yellow-500 font-bold">STATION 07 - ACTIVE</div>
+                        <div class="w-20 h-1 bg-yellow-500/20"><div class="w-4/5 h-full bg-yellow-500"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="col-span-3 glass-panel p-6 flex flex-col">
+            <h3 class="text-sm font-black mb-6 border-b border-yellow-500 pb-2 tracking-widest">MARKET SENSORS</h3>
+            <div class="space-y-6">
+                <div class="flex justify-between border-b border-white/10 pb-2">
+                    <span class="text-gray-400 text-xs font-bold">XAU/GOLD</span>
+                    <span class="text-[#00ff41] font-mono">$2,384.50</span>
+                </div>
+                <div class="flex justify-between border-b border-white/10 pb-2">
+                    <span class="text-gray-400 text-xs font-bold">NASDAQ 100</span>
+                    <span class="text-red-500 font-mono">18,122.30</span>
+                </div>
+                <div class="flex justify-between border-b border-white/10 pb-2">
+                    <span class="text-gray-400 text-xs font-bold">ETH/USDT</span>
+                    <span class="text-[#00ff41] font-mono">$3,512.12</span>
+                </div>
+                <div class="flex justify-between border-b border-white/10 pb-2">
+                    <span class="text-gray-400 text-xs font-bold">DIGIBLOX</span>
+                    <span class="text-yellow-400 font-mono">1.0245</span>
+                </div>
+            </div>
+            <div class="mt-auto">
+                <div class="p-3 bg-yellow-500/10 border border-yellow-500/30 rounded">
+                    <div class="text-[9px] uppercase opacity-50 mb-1">Quantum Encryption Key</div>
+                    <div class="text-[10px] break-all font-mono text-yellow-200">AIIZ-GEN-99-SOVEREIGN-MASTER-NODE-001X</div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+<script>
+    // 🌌 3D ARIS ENGINE
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+    const geo = new THREE.IcosahedronGeometry(25, 2);
+    const mat = new THREE.MeshBasicMaterial({ color: 0xFFD700, wireframe: true, transparent: true, opacity: 0.05 });
+    const globe = new THREE.Mesh(geo, mat);
+    scene.add(globe);
+    camera.position.z = 50;
+
+    function animate3D() {
+        requestAnimationFrame(animate3D);
+        globe.rotation.y += 0.001;
+        globe.rotation.x += 0.0005;
+        renderer.render(scene, camera);
     }
-  },
-  "cSpell.words": [
-    "abap",
-    "Acode",
-    "acodefree",
-    "actionscript",
-    "addedfolder",
-    "addedfolders",
-    "addstorage",
-    "admob",
-    "adoc",
-    "Ajit",
-    "alda",
-    "ANDROIDX",
-    "anglebracket",
-    "angularjs",
-    "antlr",
-    "anyscript",
-    "applescript",
-    "ARGB",
-    "Astro",
-    "Asuming",
-    "audiotrack",
-    "autocorrect",
-    "autohotkey",
-    "autoit",
-    "autosize",
-    "azurepipelines",
-    "babelrcpath",
-    "backbutton",
-    "bazel",
-    "biml",
-    "bitbucketpipeline",
-    "bithound",
-    "browserslist",
-    "buckbuild",
-    "buildinfo",
-    "cakefile",
-    "cakephp",
-    "canrun",
-    "canrw",
-    "Cascadia",
-    "changemode",
-    "cheader",
-    "cirru",
-    "clearclose",
-    "clojurescript",
-    "cloudfoundry",
-    "codacy",
-    "codeclimate",
-    "codecov",
-    "codekit",
-    "coffeelint",
-    "colorpicker",
-    "commitlintignore",
-    "commitlintrc",
-    "configpath",
-    "copyline",
-    "copylinesdown",
-    "copylinesup",
-    "cordova",
-    "corejs",
-    "cppheader",
-    "crossorigin",
-    "Csound",
-    "csscomb",
-    "csslint",
-    "cssmap",
-    "cuda",
-    "curlybracket",
-    "customise",
-    "cython",
-    "darcs",
-    "dartlang",
-    "deadlyjack",
-    "Debuggable",
-    "deviceready",
-    "dlang",
-    "dockertest",
-    "docpad",
-    "docz",
-    "dotjs",
-    "downloadget",
-    "doxygen",
-    "DPAD",
-    "dustjs",
-    "easylogic",
-    "Edifact",
-    "editmenu",
-    "endregion",
-    "ensime",
-    "ERUDA",
-    "filebrowser",
-    "filesize",
-    "Fira",
-    "firebasehosting",
-    "firestore",
-    "flac",
-    "Flix",
-    "floobits",
-    "Foxdebug",
-    "freemarker",
-    "gamemaker",
-    "gcode",
-    "getfilename",
-    "gitmodules",
-    "glsl",
-    "Gobstones",
-    "googleplay",
-    "gotoline",
-    "graphviz",
-    "greenkeeper",
-    "gridsome",
-    "guardfile",
-    "haml",
-    "HARDKEYBOARDHIDDEN",
-    "haxe",
-    "haxecheckstyle",
-    "haxedevelop",
-    "hideconsole",
-    "historyrestore",
-    "hjson",
-    "hlsl",
-    "homeassistant",
-    "htgroups",
-    "htmlhint",
-    "htmlpath",
-    "htpasswd",
-    "idris",
-    "idrisbin",
-    "idrispkg",
-    "imba",
-    "INAPP",
-    "infopath",
-    "informix",
-    "innosetup",
-    "inputhints",
-    "inputmethod",
-    "intoview",
-    "Invisibles",
-    "irid",
-    "jbuilder",
-    "JEXL",
-    "jsbeautify",
-    "jsbeautifyrc",
-    "jsmap",
-    "jsonld",
-    "jsonnet",
-    "JSSM",
-    "KEYBOARDHIDDEN",
-    "KHTML",
-    "kitchenci",
-    "kivy",
-    "Kumar",
-    "Laravel",
-    "lastfile",
-    "lenspalette",
-    "lintstagedrc",
-    "livescript",
-    "loaderror",
-    "Localname",
-    "Logi",
-    "logopath",
-    "Logtalk",
-    "lolcode",
-    "Lucene",
-    "lync",
-    "markdownlint",
-    "markojs",
-    "mathml",
-    "maxscript",
-    "menubutton",
-    "MIXAL",
-    "mjml",
-    "mlang",
-    "modeassoc",
-    "modelist",
-    "mojolicious",
-    "moleculer",
-    "moveline",
-    "movelinesdown",
-    "movelinesup",
-    "mson",
-    "NAVIGATIONHIDDEN",
-    "nestjs",
-    "njsproj",
-    "nodemon",
-    "NOKEYS",
-    "nord",
-    "Noto",
-    "NOTOUCH",
-    "NSIS",
-    "nsri",
-    "nunjs",
-    "nunjucks",
-    "nuxt",
-    "objectivecpp",
-    "OLED",
-    "oncanrun",
-    "onchangemode",
-    "onchangesession",
-    "ondisconnect",
-    "onenote",
-    "onexpand",
-    "onfold",
-    "onhide",
-    "onloaderror",
-    "onpurchase",
-    "onref",
-    "onremove",
-    "onrename",
-    "onrun",
-    "onsave",
-    "onscrollend",
-    "onscrollleft",
-    "onscrolltop",
-    "onsearch",
-    "onwilldisconnect",
-    "onwriteend",
-    "opencl",
-    "openfolder",
-    "opengl",
-    "orangered",
-    "ovpn",
-    "paket",
-    "partiql",
-    "PERSISTABLE",
-    "pgsql",
-    "photoshop",
-    "phpcsfixer",
-    "phps",
-    "phpt",
-    "phpunit",
-    "phraseapp",
-    "plantuml",
-    "platformio",
-    "Plore",
-    "plsql",
-    "poedit",
-    "Portugues",
-    "postcss",
-    "postcssconfig",
-    "postcssrc",
-    "powersave",
-    "Praat",
-    "praatscript",
-    "precommit",
-    "prefs",
-    "processinglang",
-    "procfile",
-    "Proggy",
-    "protobuf",
-    "protobug",
-    "PRQL",
-    "purescript",
-    "pyret",
-    "pyup",
-    "qlikview",
-    "qmldir",
-    "qsharp",
-    "QUICKTOOLS",
-    "rakefile",
-    "Raku",
-    "rakumod",
-    "rakutest",
-    "raml",
-    "rateapp",
-    "reactjs",
-    "reacttemplate",
-    "reactts",
-    "recents",
-    "rehype",
-    "remotefile",
-    "removeads",
-    "retext",
-    "rhtml",
-    "rnfr",
-    "rnto",
-    "robotframework",
-    "Roboto",
-    "rollup",
-    "rproj",
-    "rubocop",
-    "ruleset",
-    "saltstack",
-    "scilab",
-    "sconsole",
-    "SCROLLBARS",
-    "scrollleft",
-    "scrolltop",
-    "sdcard",
-    "sdlang",
-    "selectall",
-    "sequelize",
-    "settitle",
-    "shft",
-    "showconsole",
-    "silverstripe",
-    "smali",
-    "snapcraft",
-    "snyk",
-    "SPARQL",
-    "sqlserver",
-    "squarebracket",
-    "stargrade",
-    "stata",
-    "styl",
-    "stylable",
-    "stylelint",
-    "symfony",
-    "systemverilog",
-    "Tahoma",
-    "tera",
-    "Termux",
-    "terragrunt",
-    "testjs",
-    "testts",
-    "tfvars",
-    "themelist",
-    "ttcn",
-    "typescriptdef",
-    "ungap",
-    "unibeautify",
-    "unwatch",
-    "vala",
-    "vapi",
-    "vash",
-    "vbhtml",
-    "Verdana",
-    "verilog",
-    "vhdl",
-    "Visualforce",
-    "vsix",
-    "vsixmanifest",
-    "warningreport",
-    "watchmanconfig",
-    "webp",
-    "wercker",
-    "Wollok",
-    "wpgm",
-    "wpml",
-    "wtest",
-    "wxml",
-    "wxss",
-    "xquery",
-    "Zeek"
-  ],
-  "[javascript]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  }
-}
+    animate3D();
+
+    // 🕒 DIGITAL TIME SYSTEM
+    function updateClock() {
+        document.getElementById('digital-clock').innerText = new Date().toLocaleTimeString('en-GB', { hour12: false });
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // 📡 24 NODES GENERATOR
+    const nodes = document.getElementById('station-nodes');
+    for(let i=1; i<=24; i++) {
+        const d = document.createElement('div');
+        d.className = `h-10 border border-yellow-900/50 flex items-center justify-center text-[9px] font-bold ${i <= 7 ? 'bg-green-500/10 border-green-500 text-green-500' : 'text-yellow-900'}`;
+        d.innerText = String(i).padStart(2, '0');
+        nodes.appendChild(d);
+    }
+
+    // 📈 DYNAMIC CHART SIMULATOR
+    const chart = document.getElementById('chart-area');
+    for(let i=0; i<50; i++) {
+        const bar = document.createElement('div');
+        const h = Math.random() * 70 + 20;
+        bar.className = `flex-1 ${Math.random() > 0.4 ? 'bg-[#00c853]' : 'bg-[#ff1744]'} opacity-80`;
+        bar.style.height = h + '%';
+        chart.appendChild(bar);
+    }
+</script>
+</body>
+</html>
+
